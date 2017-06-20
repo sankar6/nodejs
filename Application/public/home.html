@@ -1,0 +1,46 @@
+
+<head>
+<title>GLOBAL SERVICES</title>
+<meta charset="UTF-8">
+
+  <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+
+<style>
+body
+{
+background-image:url('2.jpg');
+}
+</style>
+</head>
+<body>
+<div align="center" class="container">
+	<h1 align="center" style="color:white">GLOBAL SERVICES</h1>
+  <b><h3 align="center" style="color:white">Welcome To Global Home Services</h3></b>
+  <!--<p>The .navbar-right class is used to right-align navigation bar buttons.</p>-->
+</div>
+<div ng-controller="login">
+
+<br><br><br>
+  <div class="login-card">
+    
+    <h2 align="center" style="color:white">LOG-IN</h2><br>
+  <form>
+    <input type="text" ng-model="user" placeholder="Username" >
+    <input type="password" ng-model="pass" placeholder="Password">
+    <input type="submit" ng-click= "login()" class="login login-submit">
+  </form>
+
+  <div class="login-help">
+  <input type="submit" value="register" ng-click= "register()"> &nbsp;  &nbsp;  <input type="submit" value="forget password" ng-click= forpass()>
+  </div>
+</div>
+
+<!-- <div id="error"><img src="https://dl.dropboxusercontent.com/u/23299152/Delete-icon.png" /> Your caps-lock is on.</div> -->
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery_and_jqueryui.js'></script>
+
+</div>
+</body>

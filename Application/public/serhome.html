@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<div ng-controller="serprofctrl">
+<head><style>
+h3{
+color:white;
+float:right;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+</style></head>
+<body>
+<style>
+body
+{
+background-image:url('1.jpg')
+}
+</style>
+
+<div style="background-color:#00CED1;color:white;padding:50px;">
+  <h1 align="center">GLOBAL SERVICES</h1>
+  <h2 align="center">Servicemen Profile</h2>
+ <h3><span>
+<button type="button" ng-href="home()" value="HOME" ng-click="home()">HOME</button> ||
+<button type="submit" ng-href="profile()" value="PROFILE" ng-click="profile()">PROFILE</button> ||
+<button  type="button" ng-href="#/re" value="RESET" ng-click="sub()">RESET</button>||
+<input type="button" ng-href="logout()" value="LOGOUT" ng-click="logout()"> 
+</span>
+
+
+</h3>
+  
+</div> 
+<div class="dropdown" style="background-color:green;padding:20px;">
+</div>
+<div>
+<input type="submit" value="NOTIFICATIONS" ng-click="notif()">
+</div>
+<div>
+<input type="submit" value="ACT AS A CUSTOMER" ng-click="aacust()" >
+
+</div>
+  
+<article>
+  
+ <div class="dropdown" style="background-color:green;padding:20px;">
+</div>
+<div class="search" ng-show="showme">
+Service Type:<select name="service" ng-model="occupation" >
+				<option ></option>
+				<option name="carpenters">Carpenters</option>
+ 				<option name="Electrician">Electrician</option>
+				<option name="Plumber">Plumber</option>
+				<option name="Painter">Singer</option>
+				</select>&nbsp;&nbsp;
+location:<select name="location" ng-model="location" >
+				<option></option>
+				<option name="500001">500001</option>
+				<option name="500002">500002</option>
+				<option name="500003">500003</option>
+				<option name="500004">500004</option>
+				</select> &nbsp;&nbsp;
+			<input type="submit" value="SEARCH" ng-click="search()">
+			
+			<div ng-repeat='x in searchData'>
+				<table border=1 align="center">
+					<tr><th>FNAME : </th><td>{{x.fname}}</td></tr>
+					<tr><th>DESIGNATION : </th><td>{{x.designation}}</td></tr>
+					<tr><th>CLICK : </th><td><input type="button" value="click" ng-click="click()"|></td></tr>
+					
+				</table>
+			</div>
+			
+</div>
+</article>
+
+
+<script>
+</script>
+
+
+</body>
+</div>

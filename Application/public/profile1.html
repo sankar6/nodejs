@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<div ng-controller="cprofctrl">
+<head><style>
+h3{
+color:white;
+float:right;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+body
+{
+background-image:url('1.jpg');
+}
+
+
+</style></head>
+<body>
+
+<div style="background-color:#00CED1;color:white;padding:50px;">
+  <h1 align="center">GLOBAL SERVICES</h1>
+  <h2 align="center">Customer Profile</h2>
+ <h3><nav>
+<button type="button" ng-href="home()" value="HOME" ng-click="home()">HOME</button> ||
+<button type="submit" ng-href="profile()" value="PROFILE" ng-click="profile()">PROFILE</button> ||
+<button  type="button" ng-href="#/re" value="RESET" ng-click="sub()">RESET</button>||
+<input type="button" ng-href="logout()" value="LOGOUT" ng-click="logout()"> 
+</nav>
+</h3>
+  
+  
+</div> 
+
+
+<div class="dropdown" style="background-color:green;padding:20px;">
+</div>
+<div class="search">
+Service Type:<select name="service" ng-model="occupation" >
+				<option ></option>
+				<option name="carpenters">Carpenters</option>
+ 				<option name="Electrician">Electrician</option>
+				<option name="Plumber">Plumber</option>
+				<option name="singer">Singer</option>
+				</select>&nbsp;&nbsp;
+location:<select name="location" ng-model="location" >
+				<option></option>
+				<option name="500001">500001</option>
+				<option name="500002">500002</option>
+				<option name="500003">500003</option>
+				<option name="500004">500004</option>
+				</select> &nbsp;&nbsp;
+				
+			<input type="submit" value="SEARCH" ng-click="search()">
+			
+			<div ng-repeat='x in searchData'>
+				<table border=50 align="center" bgcolor="#00CED1" color="white" style="color:white">
+					<tr><th>FNAME : </th><td>{{x.fname}}</td></tr>
+					<tr><th>DESIGNATION : </th><td>{{x.designation}}</td></tr>
+					<tr><th>EMAIL : </th><td>{{x.email}}</td></tr>
+					<tr><th>CLICK : </th><td><input type="button" value="click" ng-click="click(x)"|></td></tr>
+					
+				</table>
+			</div>
+			
+</div>
+
+<div   ng-controller="leadProfileCtrl" ng-show="leadProfile">
+
+<center><h1 style="color:white"> CUSTOMER PROFILE </h1></center>
+				<table border=50 align="center" bgcolor="#00CED1" color="white" style="color:white">
+					<tr><th>FIRST NAME : </th><td>{{leadProfile.fname}}</td></tr>
+					<tr><th>LAST NAME : </th><td>{{leadProfile.lname}}</td></tr>
+					<tr><th>EMAIL: </th><td>{{leadProfile.email}}</td></tr>
+					<tr><th>DESIGNATION : </th><td>{{leadProfile.designation}}</td></tr>
+					<tr><th>LOCATION: </th><td>{{leadProfile.location}}</td></tr>
+					<tr><th>PHONE: </th><td>{{leadProfile.phone}}</td></tr>
+				</table>
+			</div>
+
+			
+<script>
+</script>
+
+
+</body>
+</div>

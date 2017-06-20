@@ -1,0 +1,48 @@
+
+<head>
+
+
+  <meta charset="UTF-8">
+
+  <title>customer-register</title>
+
+  <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+<body>
+<style>
+body
+{
+background-image:url('2.jpg')
+}
+</style>
+<div ng-controller="dctrl">
+
+  <div class="login-card">
+    
+    <h1>FILL YOUR DETAILS HERE</h1><br>
+  <form action="/f" method="POST">
+                First Name<input type="text" placeholder="FirstName" ng-model="fname"><br>
+				Last Name<input type="text" placeholder="LastName" ng-model="lname"><br>
+				Email<input type="text" placeholder="Email" ng-model="email"><br>
+				Phone Number<input type="text" placeholder="PhoneNumber" ng-model="phone"><br>
+				 
+				<center><input type="button" value="Submit" ng-click="submit()"></center>
+  
+
+  <div class="login-help">
+    <input type="submit" value="home" ng-click="home()">
+  </div>
+</div>
+</form>
+
+
+
+<!-- <div id="error"><img src="https://dl.dropboxusercontent.com/u/23299152/Delete-icon.png" /> Your caps-lock is on.</div> -->
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery_and_jqueryui.js'></script>
+</div>
+</body>
+
